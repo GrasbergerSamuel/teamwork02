@@ -7,28 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#F0F2F5">
-        <StackPanel Margin="20" >
+        <StackPanel Margin="20">
             <TextBlock Text="ToDo Liste" 
-                   FontSize="24" 
-                   FontWeight="Bold" 
-                   Foreground="#2C3E50" 
-                   Margin="0,0,0,15"/>
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="#2C3E50" 
+                       Margin="0,0,0,15"/>
+            <!-- ListBox to display tasks -->
             <ListBox Name="TodoList" 
-                 Height="200" 
-                 Margin="0,0,0,10" 
-                 BorderBrush="#BDC3C7" 
-                 BorderThickness="1"/>
+                     Height="200" 
+                     Margin="0,0,0,10" 
+                     BorderBrush="#BDC3C7" 
+                     BorderThickness="1"/>
             <StackPanel Orientation="Horizontal">
+                <!-- TextBox for input -->
                 <TextBox Name="TodoInput" 
-                     Width="200" 
-                     Margin="0,0,10,0" 
-                     Padding="5"/>
+                         Width="200" 
+                         Margin="0,0,10,0" 
+                         Padding="5"/>
+                <!-- Add Button -->
                 <Button Content="Hinzufügen" 
-                    Width="100" 
-                    Background="#3498DB" 
-                    Foreground="White" 
-                    Click="AddTodo"/>
+                        Width="100" 
+                        Background="#3498DB" 
+                        Foreground="White" 
+                        Click="AddTodo"/>
+                <Button Content="Löschen" 
+                        Width="100" 
+                        Background="#E74C3C" 
+                        Foreground="White" 
+                        Click="DeleteTodo" 
+                        Margin="0,0,0,0"/> 
             </StackPanel>
+            <!-- Delete Button -->
+            
         </StackPanel>
     </Grid>
 </Window>

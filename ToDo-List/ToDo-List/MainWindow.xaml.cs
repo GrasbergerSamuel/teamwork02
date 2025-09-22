@@ -11,14 +11,40 @@ using System.Windows.Shapes;
 
 namespace ToDo_List
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+ 
+        private void AddTodo(object sender, RoutedEventArgs e)
+        {
+            string task = TodoInput.Text.Trim();
+ 
+            if (!string.IsNullOrEmpty(task))
+            {
+                TodoList.Items.Add(task);
+                TodoInput.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Bitte eine Aufgabe eingeben!");
+            }
+        }
+
+        private void DeleteTodo(object sender, RoutedEventArgs e)
+        {
+            // Sicherstellen, dass eine Aufgabe ausgewählt ist
+            if (TodoList.SelectedItem != null)
+            {
+                // Entferne die ausgewählte Aufgabe
+                TodoList.Items.Remove(TodoList.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Bitte wählen Sie eine Aufgabe zum Löschen aus.");
+            }
         }
     }
 }
