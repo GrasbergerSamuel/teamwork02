@@ -28,6 +28,11 @@
                     Background="#3498DB" 
                     Foreground="White" 
                     Click="AddTodo"/>
+                <Button Content="Löschen" 
+                    Width="100" 
+                    Background="red" 
+                    Foreground="White" 
+                    Click="DeleteTodo"/>
             </StackPanel>
         </StackPanel>
     </Grid>
