@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\ToDo-List.csproj": {}
+    "C:\\Temp\\GIT\\teamwork02\\ToDo-List\\ToDo-List\\ToDo-List.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\ToDo-List.csproj": {
+    "C:\\Temp\\GIT\\teamwork02\\ToDo-List\\ToDo-List\\ToDo-List.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\ToDo-List.csproj",
+        "projectUniqueName": "C:\\Temp\\GIT\\teamwork02\\ToDo-List\\ToDo-List\\ToDo-List.csproj",
         "projectName": "ToDo-List",
-        "projectPath": "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\ToDo-List.csproj",
-        "packagesPath": "C:\\Users\\samuel.grasberger\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\obj\\",
+        "projectPath": "C:\\Temp\\GIT\\teamwork02\\ToDo-List\\ToDo-List\\ToDo-List.csproj",
+        "packagesPath": "C:\\Users\\peter.granzer\\.nuget\\packages\\",
+        "outputPath": "C:\\Temp\\GIT\\teamwork02\\ToDo-List\\ToDo-List\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\samuel.grasberger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\peter.granzer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
