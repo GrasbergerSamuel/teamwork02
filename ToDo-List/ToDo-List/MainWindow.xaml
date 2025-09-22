@@ -39,10 +39,6 @@
                     Background="red" 
                     Foreground="White" 
                     Click="DeleteTodo"/>
-                        Width="100" 
-                        Background="#3498DB" 
-                        Foreground="White" 
-                        Click="AddTodo"/>
             </StackPanel>
         </StackPanel>
     </Grid>
