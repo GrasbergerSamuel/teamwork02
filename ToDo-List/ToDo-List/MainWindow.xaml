@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:ToDo_List"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid Background="#F0F2F5">
+        <StackPanel Margin="20" >
+            <TextBlock Text="ToDo Liste" 
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   Foreground="#2C3E50" 
+                   Margin="0,0,0,15"/>
+            <ListBox Name="TodoList" 
+                 Height="200" 
+                 Margin="0,0,0,10" 
+                 BorderBrush="#BDC3C7" 
+                 BorderThickness="1"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="TodoInput" 
+                     Width="200" 
+                     Margin="0,0,10,0" 
+                     Padding="5"/>
+                <Button Content="Hinzufügen" 
+                    Width="100" 
+                    Background="#3498DB" 
+                    Foreground="White" 
+                    Click="AddTodo"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
