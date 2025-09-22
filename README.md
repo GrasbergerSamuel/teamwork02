@@ -11,10 +11,10 @@ Projekt-Mitglieder: Samuel Grasberger, Murad Aslani, Peter Granzer, Sebastian Si
 ## Features (Basis)
 -ReadMe angepasst (#1) Samuel Grasberger
 - UI-Design angepasst (#2) Samuel Grasberger
-- Aufgabe hinzufügen (#3) Murad Aslani
+- Aufgabe hinzufügen (#3) Samuel Grasberger
 - Aufgaben löschen (#4) Peter Granzer 
 - Aufgaben als erledigt markieren (#5) Sebastian Sitz
-- Filter: Alle / Offen / Erledigt (#6) Samuel Grasberger
+- Filter: Alle / Offen / Erledigt (#6) Murad Aslani
 - Persistenz in Textdatei (#7) Murad Aslani
 - ReadMe erweitern (#8) Samuel Grasberger
 - Bugfixes (#9) 
