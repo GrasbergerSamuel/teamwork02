@@ -11,14 +11,26 @@ using System.Windows.Shapes;
 
 namespace ToDo_List
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AddTodo(object sender, RoutedEventArgs e)
+        {
+            string task = TodoInput.Text.Trim();
+
+            if (!string.IsNullOrEmpty(task))
+            {
+                TodoList.Items.Add(task);
+                TodoInput.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Bitte eine Aufgabe eingeben!");
+            }
         }
     }
 }
