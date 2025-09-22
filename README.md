@@ -32,5 +32,12 @@ Projekt-Mitglieder:
 
 ## Installationsanleitung
 1. Repository clonen:
-   ```bash
+   bash
    git clone <repo-url>
+   
+   ## Erklärung der Funktionen
+- **Aufgabe hinzufügen**: Text eingeben und auf *Hinzufügen* klicken → erscheint in der Liste.  
+- **Aufgabe löschen**: Markierte Aufgabe auswählen und löschen.  
+- **Aufgabe erledigen**: Aufgabe als erledigt markieren (z. B. durch Häkchen).  
+- **Filter**: Ansicht umschalten zwischen *Alle*, *Offen* und *Erledigt*.  
+- **Speichern/Laden**: Aufgaben werden automatisch in einer Textdatei gespeichert und beim Neustart wieder geladen.  
