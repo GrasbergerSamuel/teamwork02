@@ -2,23 +2,42 @@
 Git-Projekt mit Pull-Request
 
 ## Beschreibung
-Dies ist eine einfache ToDo-Liste als WPF-Anwendung. 
-Die App erlaubt es, Aufgaben hinzuzufügen, als erledigt zu markieren, zu löschen und später Filter zu verwenden.
+Dies ist eine einfache ToDo-Liste als WPF-Anwendung.  
+Die App erlaubt es, Aufgaben hinzuzufügen, als erledigt zu markieren, zu löschen und später nach Status zu filtern.  
+Zusätzlich werden die Daten in einer Textdatei gespeichert, sodass die Aufgaben beim Neustart erhalten bleiben.  
 
-Projekt-Mitglieder: Samuel Grasberger, Murad Aslani, Peter Granzer, Sebastian Sitz
+Projekt-Mitglieder:  
+- Samuel Grasberger  
+- Murad Aslani  
+- Peter Granzer  
+- Sebastian Sitz  
 
+---
 
-## Features (Basis)
--ReadMe angepasst (#1) Samuel Grasberger
-- UI-Design angepasst (#2) Samuel Grasberger
-- Aufgabe hinzufügen (#3) Murad Aslani
-- Aufgaben löschen (#4) Peter Granzer 
-- Aufgaben als erledigt markieren (#5) Sebastian Sitz
-- Filter: Alle / Offen / Erledigt (#6) Samuel Grasberger
-- Persistenz in Textdatei (#7) Murad Aslani
-- ReadMe erweitern (#8) Samuel Grasberger
-- Bugfixes (#9) 
-- Code-Review-Übung (#10)
-- weitere-Features (#11)
-- Präsentation vorbereiten (#12)
+## Features
+- **README angepasst** (#1) – *Samuel Grasberger*  
+- **UI-Design angepasst** (#2) – *Samuel Grasberger*  
+- **Aufgabe hinzufügen** (#3) – *Samuel Grasberger*  
+- **Aufgaben löschen** (#4) – *Peter Granzer*  
+- **Aufgaben als erledigt markieren** (#5) – *Sebastian Sitz*  
+- **Filter: Alle / Offen / Erledigt** (#6) – *Murad Aslani*  
+- **Persistenz in Textdatei** (#7) – *Murad Aslani*  
+- **README erweitert** (#8) – *Samuel Grasberger*  
+- **Bugfixes** (#9) – *alle*  
+- **Code-Review-Übung** (#10) – *alle*  
+- **Weitere Features** (#11) – *Team*  
+- **Präsentation** (#12) – *Team*  
 
+---
+
+## Installationsanleitung
+1. Repository clonen:
+   bash
+   git clone <repo-url>
+   
+   ## Erklärung der Funktionen
+- **Aufgabe hinzufügen**: Text eingeben und auf *Hinzufügen* klicken → erscheint in der Liste.  
+- **Aufgabe löschen**: Markierte Aufgabe auswählen und löschen.  
+- **Aufgabe erledigen**: Aufgabe als erledigt markieren (z. B. durch Häkchen).  
+- **Filter**: Ansicht umschalten zwischen *Alle*, *Offen* und *Erledigt*.  
+- **Speichern/Laden**: Aufgaben werden automatisch in einer Textdatei gespeichert und beim Neustart wieder geladen.  
