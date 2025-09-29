@@ -35,6 +35,7 @@
                     Foreground="White" 
                     Click="AddTodo"/>
                 <Button Content="Löschen" 
+                    Margin="1,0,0,0"
                     Width="100" 
                     Background="red" 
                     Foreground="White" 

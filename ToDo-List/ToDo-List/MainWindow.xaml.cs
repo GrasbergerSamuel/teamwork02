@@ -54,16 +54,17 @@ namespace ToDo_List
         }
         private void DeleteTodo(object sender, RoutedEventArgs e)
         {
-            // Sicherstellen, dass eine Aufgabe ausgewählt ist
             if (TodoList.SelectedItem != null)
             {
-                // Entferne die ausgewählte Aufgabe
-                TodoList.Items.Remove(TodoList.SelectedItem);
+                string selectedTask = TodoList.SelectedItem as string;
+                tasks.Remove(selectedTask); // Von tasks entfernen
+                RefreshList();              // ListBox neu laden
             }
             else
             {
                 MessageBox.Show("Bitte wählen Sie eine Aufgabe zum Löschen aus.");
             }
         }
+
     }
 }
