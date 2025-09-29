@@ -2,19 +2,29 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.IO;
+using System;
 
 namespace ToDo_List
 {
+
     public partial class MainWindow : Window
     {
         private List<TaskItem> tasks = new List<TaskItem>();
         private string currentFilter = "Alle";
+        private readonly string dataFile = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "ToDo_List_tasks.txt");
 
         public MainWindow()
         {
             InitializeComponent();
             FilterComboBox.SelectionChanged += FilterComboBox_SelectionChanged;
-            this.Loaded += (s, e) => RefreshList();
+            this.Loaded += (s, e) =>
+            {
+                LoadTasks();
+                RefreshList();
+            };
         }
 
         private void AddTodo(object sender, RoutedEventArgs e)
@@ -24,6 +34,7 @@ namespace ToDo_List
             {
                 tasks.Add(new TaskItem { Text = task, IsCompleted = false });
                 TodoInput.Clear();
+                SaveTasks();
                 RefreshList();
             }
         }
@@ -47,6 +58,7 @@ namespace ToDo_List
             if (TodoList.SelectedItem is TaskItem selected)
             {
                 tasks.Remove(selected);
+                SaveTasks();
                 RefreshList();
             }
             else
@@ -69,7 +81,41 @@ namespace ToDo_List
             if (sender is CheckBox cb && cb.DataContext is TaskItem task)
             {
                 task.IsCompleted = cb.IsChecked == true;
+                SaveTasks();
                 RefreshList();
+            }
+        }
+
+        private void SaveTasks()
+        {
+            try
+            {
+                var lines = tasks.Select(t => $"{t.Text}|{t.IsCompleted}");
+                File.WriteAllLines(dataFile, lines);
+            }
+            catch
+            {
+                MessageBox.Show("Fehler beim Speichern der Aufgaben.");
+            }
+        }
+
+        private void LoadTasks()
+        {
+            tasks.Clear();
+            if (File.Exists(dataFile))
+            {
+                foreach (var line in File.ReadAllLines(dataFile))
+                {
+                    var parts = line.Split('|');
+                    if (parts.Length == 2)
+                    {
+                        tasks.Add(new TaskItem
+                        {
+                            Text = parts[0],
+                            IsCompleted = bool.TryParse(parts[1], out var completed) && completed
+                        });
+                    }
+                }
             }
         }
     }
