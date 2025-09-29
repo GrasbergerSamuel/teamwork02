@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Temp\\Git\\teamwork02\\ToDo-List\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF7B17B6-5628-47CD-8F9D-DD4809FF8C96}|ToDo-List\\ToDo-List.csproj|c:\\temp\\git\\teamwork02\\todo-list\\todo-list\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DF7B17B6-5628-47CD-8F9D-DD4809FF8C96}|ToDo-List\\ToDo-List.csproj|solutionrelative:todo-list\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF7B17B6-5628-47CD-8F9D-DD4809FF8C96}|ToDo-List\\ToDo-List.csproj|c:\\temp\\git\\teamwork02\\todo-list\\todo-list\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF7B17B6-5628-47CD-8F9D-DD4809FF8C96}|ToDo-List\\ToDo-List.csproj|solutionrelative:todo-list\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7B17B6-5628-47CD-8F9D-DD4809FF8C96}|ToDo-List\\ToDo-List.csproj|c:\\temp\\git\\teamwork02\\todo-list\\todo-list\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DF7B17B6-5628-47CD-8F9D-DD4809FF8C96}|ToDo-List\\ToDo-List.csproj|solutionrelative:todo-list\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,7 +26,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ToDo-List\\MainWindow.xaml",
@@ -38,13 +38,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "ToDo-List\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ToDo-List\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "ToolTip": "C:\\Temp\\Git\\teamwork02\\ToDo-List\\ToDo-List\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "ToDo-List\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-22T12:24:48.586Z",
               "EditorCaption": ""

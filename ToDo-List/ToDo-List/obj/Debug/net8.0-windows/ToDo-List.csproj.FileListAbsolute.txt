@@ -6,7 +6,6 @@ C:\Temp\Git\teamwork02\ToDo-List\ToDo-List\bin\Debug\net8.0-windows\ToDo-List.pd
 C:\Temp\Git\teamwork02\ToDo-List\ToDo-List\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Temp\Git\teamwork02\ToDo-List\ToDo-List\obj\Debug\net8.0-windows\App.g.cs
 C:\Temp\Git\teamwork02\ToDo-List\ToDo-List\obj\Debug\net8.0-windows\ToDo-List_MarkupCompile.cache
-C:\Temp\Git\teamwork02\ToDo-List\ToDo-List\obj\Debug\net8.0-windows\ToDo-List_MarkupCompile.lref
 C:\Temp\Git\teamwork02\ToDo-List\ToDo-List\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Temp\Git\teamwork02\ToDo-List\ToDo-List\obj\Debug\net8.0-windows\ToDo-List.g.resources
 C:\Temp\Git\teamwork02\ToDo-List\ToDo-List\obj\Debug\net8.0-windows\ToDo-List.GeneratedMSBuildEditorConfig.editorconfig
