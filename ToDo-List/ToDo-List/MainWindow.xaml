@@ -14,9 +14,9 @@
                       Width="150"
                       Margin="0,0,0,10"
                       SelectionChanged="FilterComboBox_SelectionChanged">
-                <ComboBoxItem Content="Alle" IsSelected="True"/>
-                <ComboBoxItem Content="Offen"/>
-                <ComboBoxItem Content="Erledigt"/>
+                <ComboBoxItem Content="All" IsSelected="True"/>
+                <ComboBoxItem Content="Pending"/>
+                <ComboBoxItem Content="Done"/>
             </ComboBox>
             <ListBox Name="TodoList" 
                      Height="200" 
@@ -29,12 +29,12 @@
                          Width="200" 
                          Margin="0,0,10,0" 
                          Padding="5"/>
-                <Button Content="Hinzufügen" 
+                <Button Content="Add new ToDo" 
                         Width="100" 
                         Background="#3498DB" 
                         Foreground="White" 
                         Click="AddTodo"/>
-                <Button Content="Löschen" 
+                <Button Content="Delete ToDo" 
                         Width="100" 
                         Background="red" 
                         Foreground="White" 
