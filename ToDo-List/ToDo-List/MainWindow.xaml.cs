@@ -1,17 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.TextFormatting;
 
 namespace ToDo_List
 {
     public partial class MainWindow : Window
     {
-        private List<string> tasks = new List<string>();
+        private List<TaskItem> tasks = new List<TaskItem>();
+        private string currentFilter = "Alle";
 
         public MainWindow()
         {
             InitializeComponent();
+            FilterComboBox.SelectionChanged += FilterComboBox_SelectionChanged;
+            this.Loaded += (s, e) => RefreshList();
         }
 
         private void AddTodo(object sender, RoutedEventArgs e)
@@ -19,7 +22,7 @@ namespace ToDo_List
             string task = TodoInput.Text.Trim();
             if (!string.IsNullOrEmpty(task))
             {
-                tasks.Add(task);
+                tasks.Add(new TaskItem { Text = task, IsCompleted = false });
                 TodoInput.Clear();
                 RefreshList();
             }
@@ -27,38 +30,24 @@ namespace ToDo_List
 
         private void RefreshList()
         {
+            if (TodoList == null) return;
+
+            IEnumerable<TaskItem> filtered = tasks;
+            if (currentFilter == "Offen")
+                filtered = tasks.Where(t => !t.IsCompleted);
+            else if (currentFilter == "Erledigt")
+                filtered = tasks.Where(t => t.IsCompleted);
+
             TodoList.ItemsSource = null;
-            TodoList.ItemsSource = tasks;
+            TodoList.ItemsSource = filtered;
         }
 
-        private void TaskChecked(object sender, RoutedEventArgs e)
-        {
-            if (sender is CheckBox checkBox)
-            {
-                if (checkBox.Content is TextBlock tb)
-                {
-                    tb.TextDecorations = System.Windows.TextDecorations.Strikethrough;
-                }
-            }
-        }
-
-        private void TaskUnchecked(object sender, RoutedEventArgs e)
-        {
-            if (sender is CheckBox checkBox)
-            {
-                if (checkBox.Content is TextBlock tb)
-                {
-                    tb.TextDecorations = null;
-                }
-            }
-        }
         private void DeleteTodo(object sender, RoutedEventArgs e)
         {
-            if (TodoList.SelectedItem != null)
+            if (TodoList.SelectedItem is TaskItem selected)
             {
-                string selectedTask = TodoList.SelectedItem as string;
-                tasks.Remove(selectedTask); // Von tasks entfernen
-                RefreshList();              // ListBox neu laden
+                tasks.Remove(selected);
+                RefreshList();
             }
             else
             {
@@ -66,5 +55,28 @@ namespace ToDo_List
             }
         }
 
+        private void FilterComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (FilterComboBox.SelectedItem is ComboBoxItem item)
+            {
+                currentFilter = item.Content.ToString();
+                RefreshList();
+            }
+        }
+
+        private void TodoList_CheckChanged(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox cb && cb.DataContext is TaskItem task)
+            {
+                task.IsCompleted = cb.IsChecked == true;
+                RefreshList();
+            }
+        }
+    }
+
+    public class TaskItem
+    {
+        public string Text { get; set; }
+        public bool IsCompleted { get; set; }
     }
 }

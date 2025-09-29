@@ -3,43 +3,42 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#F0F2F5">
-        <StackPanel Margin="20" >
+        <StackPanel Margin="20">
             <TextBlock Text="ToDo Liste" 
                        FontSize="24" 
                        FontWeight="Bold" 
                        Foreground="#2C3E50" 
                        Margin="0,0,0,15"/>
+            <!-- Filter ComboBox -->
+            <ComboBox Name="FilterComboBox"
+                      Width="150"
+                      Margin="0,0,0,10"
+                      SelectionChanged="FilterComboBox_SelectionChanged">
+                <ComboBoxItem Content="Alle" IsSelected="True"/>
+                <ComboBoxItem Content="Offen"/>
+                <ComboBoxItem Content="Erledigt"/>
+            </ComboBox>
             <ListBox Name="TodoList" 
                      Height="200" 
                      Margin="0,0,0,10" 
                      BorderBrush="#BDC3C7" 
-                     BorderThickness="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <CheckBox Checked="TaskChecked" Unchecked="TaskUnchecked" Margin="5,0">
-                                <TextBlock Text="{Binding}" />
-                            </CheckBox>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+                     BorderThickness="1"
+                     DisplayMemberPath="Text"/>
             <StackPanel Orientation="Horizontal">
                 <TextBox Name="TodoInput" 
                          Width="200" 
                          Margin="0,0,10,0" 
                          Padding="5"/>
                 <Button Content="Hinzufügen" 
-                         Width="100" 
-                    Background="#3498DB" 
-                    Foreground="White" 
-                    Click="AddTodo"/>
+                        Width="100" 
+                        Background="#3498DB" 
+                        Foreground="White" 
+                        Click="AddTodo"/>
                 <Button Content="Löschen" 
-                    Margin="1,0,0,0"
-                    Width="100" 
-                    Background="red" 
-                    Foreground="White" 
-                    Click="DeleteTodo"/>
+                        Width="100" 
+                        Background="red" 
+                        Foreground="White" 
+                        Click="DeleteTodo"/>
             </StackPanel>
         </StackPanel>
     </Grid>
